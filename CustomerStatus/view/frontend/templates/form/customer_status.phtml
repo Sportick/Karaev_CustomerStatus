@@ -1,0 +1,19 @@
+<?php
+/**
+ * @var \Karaev\CustomerStatus\Block\CustomerStatus $block
+ */
+?>
+<form action="<?= $block->escapeUrl($block->getAction())?>" method="post" enctype="multipart/form-data">
+    <?= $block->getBlockHtml('formkey') ?>
+    <fieldset class="fieldset">
+        <select name="status">
+            <option value="0" <?=$block->getDataStatus() === 0 ? 'selected' : ''?>><?=__('Disable')?></option>
+            <option value="1" <?=$block->getDataStatus() === 1 ? 'selected' : ''?>><?=__('Enable')?></option>
+        </select>
+    </fieldset>
+    <div class="actions-toolbar review-form-actions">
+        <div class="primary actions-primary">
+            <button type="submit" class="action submit primary"><span><?= $block->escapeHtml(__('Save')) ?></span></button>
+        </div>
+    </div>
+</form>

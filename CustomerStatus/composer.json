@@ -1,0 +1,23 @@
+{
+    "name": "karaev/customer-status",
+    "description": "Test module from Islam Karaev https://www.linkedin.com/in/islam-karaev-587731174/",
+    "require": {
+        "php": ">=7.4.0",
+        "magento/module-customer": "*",
+        "magento/module-theme": "*"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Advox\\Cats\\": ""
+        }
+    }
+}
